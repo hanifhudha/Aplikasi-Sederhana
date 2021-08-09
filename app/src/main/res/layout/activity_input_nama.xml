@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".activity.InputNamaActivity">
+
+    <TextView
+        android:id="@+id/txtLabelInputNama"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:text="@string/perkenalkan_nama_anda"
+        android:textColor="#000000"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <EditText
+        android:id="@+id/editInputNama"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="8dp"
+        android:layout_marginEnd="8dp"
+        android:ems="10"
+        android:hint="@string/masukkan_nama_anda"
+        android:inputType="textPersonName"
+        android:textStyle="italic"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/txtLabelInputNama"
+        tools:ignore="Autofill,LabelFor" />
+
+    <Button
+        android:id="@+id/btnTampil"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:text="@string/tampilkan"
+        android:onClick="actionTampil"
+        app:layout_constraintEnd_toEndOf="@+id/editInputNama"
+        app:layout_constraintStart_toStartOf="@+id/editInputNama"
+        app:layout_constraintTop_toBottomOf="@+id/editInputNama" />
+
+    <TextView
+        android:id="@+id/txtLabelHasil"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:text="@string/nama_anda"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="@+id/btnTampil"
+        app:layout_constraintStart_toStartOf="@+id/btnTampil"
+        app:layout_constraintTop_toBottomOf="@+id/btnTampil" />
+
+    <TextView
+        android:id="@+id/txtOutput"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:textColor="#000000"
+        android:textStyle="bold|italic"
+        app:layout_constraintEnd_toEndOf="@+id/txtLabelHasil"
+        app:layout_constraintStart_toStartOf="@+id/txtLabelHasil"
+        app:layout_constraintTop_toBottomOf="@+id/txtLabelHasil" />
+</androidx.constraintlayout.widget.ConstraintLayout>

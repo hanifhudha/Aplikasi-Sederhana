@@ -1,0 +1,18 @@
+<resources>
+    <string name="app_name">Aplikasi Sederhana</string>
+    <string name="perkenalkan_nama_anda">Perkenalkan Nama Anda</string>
+    <string name="masukkan_nama_anda">Masukkan Nama Anda</string>
+    <string name="tampilkan">Tampilkan</string>
+    <string name="nama_anda">Nama Anda :</string>
+    <string name="masukkan_dua_angka">Masukkan Dua Angka</string>
+    <string name="masukkan_angka_pertama">Masukkan Angka Pertama</string>
+    <string name="masukkan_angka_kedua">Masukkan Angka Kedua</string>
+    <string name="btnTambah">+</string>
+    <string name="btnKurang">-</string>
+    <string name="btnBagi">/</string>
+    <string name="btnKali">x</string>
+    <string name="bersihkan">Bersihkan</string>
+    <string name="hasil">Hasil :</string>
+    <string name="outputawalkalku">0.0</string>
+    <string name="pilihlah_salah_satu_negara">Pilihlah salah satu negara :</string>
+</resources>

@@ -1,0 +1,122 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".activity.KalkulatorActivity">
+
+    <TextView
+        android:id="@+id/txtLabelKalkulator"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:text="@string/masukkan_dua_angka"
+        android:textColor="#000000"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <EditText
+        android:id="@+id/editAngka1"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="16dp"
+        android:layout_marginEnd="8dp"
+        android:ems="10"
+        android:hint="@string/masukkan_angka_pertama"
+        android:inputType="number"
+        android:textStyle="italic"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/txtLabelKalkulator"
+        android:importantForAutofill="no" />
+
+    <EditText
+        android:id="@+id/editAngka2"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:ems="10"
+        android:hint="@string/masukkan_angka_kedua"
+        android:inputType="number"
+        android:textStyle="italic"
+        app:layout_constraintEnd_toEndOf="@+id/editAngka1"
+        app:layout_constraintStart_toStartOf="@+id/editAngka1"
+        app:layout_constraintTop_toBottomOf="@+id/editAngka1"
+        android:importantForAutofill="no" />
+
+    <Button
+        android:id="@+id/btnTambah"
+        android:layout_width="50dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:text="@string/btnTambah"
+        android:onClick="actionPlus"
+        app:layout_constraintStart_toStartOf="@+id/editAngka2"
+        app:layout_constraintTop_toBottomOf="@+id/editAngka2" />
+
+    <Button
+        android:id="@+id/btnKurang"
+        android:layout_width="50dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:text="@string/btnKurang"
+        android:onClick="actionMinus"
+        app:layout_constraintStart_toEndOf="@+id/btnTambah"
+        app:layout_constraintTop_toTopOf="@+id/btnTambah" />
+
+    <Button
+        android:id="@+id/btnBagi"
+        android:layout_width="50dp"
+        android:layout_height="wrap_content"
+        android:text="@string/btnBagi"
+        android:onClick="actionBagi"
+        app:layout_constraintEnd_toEndOf="@+id/editAngka2"
+        app:layout_constraintTop_toTopOf="@+id/btnKurang" />
+
+    <Button
+        android:id="@+id/btnKali"
+        android:layout_width="50dp"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="16dp"
+        android:text="@string/btnKali"
+        android:onClick="actionKali"
+        app:layout_constraintEnd_toStartOf="@+id/btnBagi"
+        app:layout_constraintTop_toTopOf="@+id/btnKurang" />
+
+    <Button
+        android:id="@+id/btnClear"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:text="@string/bersihkan"
+        android:onClick="actionBersihkan"
+        app:layout_constraintEnd_toEndOf="@+id/editAngka2"
+        app:layout_constraintStart_toStartOf="@+id/editAngka2"
+        app:layout_constraintTop_toBottomOf="@+id/btnTambah" />
+
+    <TextView
+        android:id="@+id/txtLabelHasilkalku"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:text="@string/hasil"
+        app:layout_constraintEnd_toEndOf="@+id/btnClear"
+        app:layout_constraintStart_toStartOf="@+id/btnClear"
+        app:layout_constraintTop_toBottomOf="@+id/btnClear" />
+
+    <TextView
+        android:id="@+id/txtHasilKalku"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:text="@string/outputawalkalku"
+        android:textColor="#000000"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="@+id/txtLabelHasilkalku"
+        app:layout_constraintStart_toStartOf="@+id/txtLabelHasilkalku"
+        app:layout_constraintTop_toBottomOf="@+id/txtLabelHasilkalku" />
+</androidx.constraintlayout.widget.ConstraintLayout>
