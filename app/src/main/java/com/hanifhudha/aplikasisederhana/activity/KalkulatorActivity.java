@@ -6,6 +6,7 @@ import android.os.Bundle;
 import android.view.View;
 import android.widget.EditText;
 import android.widget.TextView;
+import android.widget.Toast;
 
 import com.hanifhudha.aplikasisederhana.R;
 
@@ -27,31 +28,51 @@ public class KalkulatorActivity extends AppCompatActivity {
     }
 
     public void actionPlus(View view) {
-        double angka1 = Double.parseDouble(edtAngka1.getText().toString());
-        double angka2 = Double.parseDouble(edtAngka2.getText().toString());
-        double hasil = angka1 + angka2;
-        txtHasil.setText(String.valueOf(hasil));
+        if (edtAngka1.getText().toString().isEmpty() || edtAngka2.getText().toString().isEmpty()) {
+            Toast.makeText(this, "Masukkan Angka Tidak Boleh Kosong!", Toast.LENGTH_SHORT).show();
+            txtHasil.setText("0.0");
+        } else {
+            double angka1 = Double.parseDouble(edtAngka1.getText().toString());
+            double angka2 = Double.parseDouble(edtAngka2.getText().toString());
+            double hasil = angka1 + angka2;
+            txtHasil.setText(String.valueOf(hasil));
+        }
     }
 
     public void actionMinus(View view) {
-        double angka1 = Double.parseDouble(edtAngka1.getText().toString());
-        double angka2 = Double.parseDouble(edtAngka2.getText().toString());
-        double hasil = angka1 - angka2;
-        txtHasil.setText(String.valueOf(hasil));
+        if (edtAngka1.getText().toString().isEmpty() || edtAngka2.getText().toString().isEmpty()) {
+            txtHasil.setText("0.0");
+            Toast.makeText(this, "Masukkan Angka Tidak Boleh Kosong!", Toast.LENGTH_SHORT).show();
+        } else {
+            double angka1 = Double.parseDouble(edtAngka1.getText().toString());
+            double angka2 = Double.parseDouble(edtAngka2.getText().toString());
+            double hasil = angka1 - angka2;
+            txtHasil.setText(String.valueOf(hasil));
+        }
     }
 
     public void actionBagi(View view) {
-        double angka1 = Double.parseDouble(edtAngka1.getText().toString());
-        double angka2 = Double.parseDouble(edtAngka2.getText().toString());
-        double hasil = angka1 / angka2;
-        txtHasil.setText(String.valueOf(hasil));
+        if (edtAngka1.getText().toString().isEmpty() || edtAngka2.getText().toString().isEmpty()) {
+            txtHasil.setText("0.0");
+            Toast.makeText(this, "Masukkan Angka Tidak Boleh Kosong!", Toast.LENGTH_SHORT).show();
+        } else {
+            double angka1 = Double.parseDouble(edtAngka1.getText().toString());
+            double angka2 = Double.parseDouble(edtAngka2.getText().toString());
+            double hasil = angka1 / angka2;
+            txtHasil.setText(String.valueOf(hasil));
+        }
     }
 
     public void actionKali(View view) {
-        double angka1 = Double.parseDouble(edtAngka1.getText().toString());
-        double angka2 = Double.parseDouble(edtAngka2.getText().toString());
-        double hasil = angka1 * angka2;
-        txtHasil.setText(String.valueOf(hasil));
+        if (edtAngka1.getText().toString().isEmpty() || edtAngka2.getText().toString().isEmpty()) {
+            txtHasil.setText("0.0");
+            Toast.makeText(this, "Masukkan Angka Tidak Boleh Kosong!", Toast.LENGTH_SHORT).show();
+        } else {
+            double angka1 = Double.parseDouble(edtAngka1.getText().toString());
+            double angka2 = Double.parseDouble(edtAngka2.getText().toString());
+            double hasil = angka1 * angka2;
+            txtHasil.setText(String.valueOf(hasil));
+        }
     }
 
     public void actionBersihkan(View view) {
